@@ -247,17 +247,17 @@ class FabriceAIService:
     async def stream_response(self, session_id: str, user_message: str) -> AsyncGenerator[str, None]:
         # If we have an API key, try Claude first
         if self._has_api_key and self.client:
-            history = self._get_chat_history(session_id)
-            career_context = self._find_career_context(user_message)
-
-            messages = history.copy()
-            enriched_message = user_message
-            if career_context:
-                enriched_message += career_context
-
-            messages.append({"role": "user", "content": enriched_message})
-
             try:
+                history = self._get_chat_history(session_id)
+                career_context = self._find_career_context(user_message)
+
+                messages = history.copy()
+                enriched_message = user_message
+                if career_context:
+                    enriched_message += career_context
+
+                messages.append({"role": "user", "content": enriched_message})
+
                 # Collect Claude's response chunks
                 chunks: list[str] = []
                 with self.client.messages.stream(
@@ -278,7 +278,16 @@ class FabriceAIService:
                 pass  # Fall through to fallback
 
         # Fallback: use database-driven responses
-        response = self._generate_fallback_response(user_message)
+        try:
+            response = self._generate_fallback_response(user_message)
+        except Exception:
+            response = (
+                "Hi! I'm **FabriceAI**, your career advisor! 👋\n\n"
+                "I can help you understand how AI will impact different careers. "
+                "Try asking me about a specific career like 'software developer' or 'nurse', "
+                "or ask 'What careers are safest from AI?'\n\n"
+                "Explore the **Dashboard** for detailed data on hundreds of careers!"
+            )
 
         # Stream it word by word for a natural feel
         words = response.split(' ')

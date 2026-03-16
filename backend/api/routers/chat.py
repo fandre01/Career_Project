@@ -1,3 +1,4 @@
+import logging
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
@@ -6,6 +7,8 @@ from backend.schemas.chat import ChatRequest, ChatHistoryResponse, ChatMessageSc
 from backend.services.chat_service import FabriceAIService
 from backend.models.chat_session import ChatSession, ChatMessage
 from datetime import datetime, timezone
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/chat", tags=["chat"])
 
@@ -43,6 +46,7 @@ async def chat(request: ChatRequest, db: Session = Depends(get_db)):
                 full_response += chunk
                 yield f"data: {json.dumps({'content': chunk})}\n\n"
         except Exception as e:
+            logger.error(f"Chat streaming error: {e}", exc_info=True)
             error_msg = "Sorry, I encountered an error. Please try again!"
             yield f"data: {json.dumps({'content': error_msg})}\n\n"
             full_response = error_msg
