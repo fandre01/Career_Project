@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, TrendingUp, AlertTriangle, Sparkles, ArrowRight, Brain, Target, BarChart3 } from 'lucide-react';
+import { Shield, AlertTriangle, Sparkles, ArrowRight, Brain, Target, BarChart3 } from 'lucide-react';
 import StatCard from '../components/common/StatCard';
 import RiskBadge from '../components/common/RiskBadge';
 import { SkeletonCard } from '../components/common/Skeleton';

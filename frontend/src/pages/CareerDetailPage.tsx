@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Briefcase, GraduationCap, TrendingUp, Users, DollarSign, Calendar } from 'lucide-react';
+import { ArrowLeft, GraduationCap, TrendingUp, Users, DollarSign, Calendar } from 'lucide-react';
 import {
   LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer,
-  BarChart, Bar, Cell, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar,
+  BarChart, Bar, Cell,
 } from 'recharts';
 import RiskGauge from '../components/predictions/RiskGauge';
 import RiskBadge from '../components/common/RiskBadge';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import { fetchCareer } from '../api/careers';
-import { formatSalary, formatNumber, getRiskColor } from '../utils/formatters';
+import { formatSalary, formatNumber } from '../utils/formatters';
 import { useLanguage } from '../i18n/LanguageContext';
 import type { CareerDetail } from '../types/career';
 
@@ -128,7 +128,7 @@ export default function CareerDetailPage() {
                 <YAxis tick={{ fill: '#94a3b8' }} tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`} />
                 <Tooltip
                   contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155', borderRadius: '8px' }}
-                  formatter={(value: number) => [formatSalary(value), 'Projected Salary']}
+                  formatter={(value) => [formatSalary(Number(value)), 'Projected Salary']}
                 />
                 <Line type="monotone" dataKey="salary" stroke="#6366f1" strokeWidth={3} dot={{ r: 6 }} />
               </LineChart>
@@ -146,8 +146,8 @@ export default function CareerDetailPage() {
                 <YAxis domain={[0, 100]} tick={{ fill: '#94a3b8' }} />
                 <Tooltip
                   contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155', borderRadius: '8px' }}
-                  formatter={(value: number, name: string) => [
-                    `${value.toFixed(1)}%`,
+                  formatter={(value, name) => [
+                    `${Number(value).toFixed(1)}%`,
                     name === 'risk' ? 'Risk Score' : 'Stability',
                   ]}
                 />

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, ArrowRight, Dna, Sparkles } from 'lucide-react';
+import { ArrowRight, Dna, Sparkles } from 'lucide-react';
 import RiskBadge from '../components/common/RiskBadge';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import { fetchCareerDNA } from '../api/careers';

@@ -7,7 +7,7 @@ import {
 import { SkeletonCareerList } from '../components/common/Skeleton';
 import RiskBadge from '../components/common/RiskBadge';
 import { fetchCareers, fetchIndustryBreakdown, fetchCategories } from '../api/careers';
-import { formatSalary, getRiskColor } from '../utils/formatters';
+import { formatSalary } from '../utils/formatters';
 import { useLanguage } from '../i18n/LanguageContext';
 import type { PaginatedCareers, IndustryBreakdown } from '../types/career';
 
@@ -76,7 +76,7 @@ export default function DashboardPage() {
               <Tooltip
                 contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155', borderRadius: '8px' }}
                 labelStyle={{ color: '#f8fafc' }}
-                formatter={(value: number) => [`${value.toFixed(1)}%`, 'Avg Risk']}
+                formatter={(value) => [`${Number(value).toFixed(1)}%`, 'Avg Risk']}
               />
               <Bar dataKey="avg_risk_score" radius={[0, 4, 4, 0]}>
                 {industries.map((entry, i) => (
