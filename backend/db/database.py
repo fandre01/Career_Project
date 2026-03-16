@@ -26,5 +26,5 @@ def get_db():
 
 
 def init_db():
-    from backend.models import career, prediction, skill, chat_session
+    from backend.models import career, prediction, skill, chat_session, engagement
     Base.metadata.create_all(bind=engine)

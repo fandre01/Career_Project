@@ -1,0 +1,27 @@
+databases:
+  - name: careershield-db
+    plan: free
+    databaseName: careershield
+
+services:
+  - type: web
+    name: careershield-ai
+    runtime: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: careershield-db
+          property: connectionURI
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: DEBUG
+        value: "false"
+      - key: PYTHON_VERSION
+        value: "3.11.11"
+      - key: NODE_VERSION
+        value: "20"

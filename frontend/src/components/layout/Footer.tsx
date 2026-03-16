@@ -1,4 +1,5 @@
-import { Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Shield, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 export default function Footer() {
@@ -24,6 +25,10 @@ export default function Footer() {
               {t.footer_owner}
             </span>
           </div>
+          <Link to="/#comments" className="flex items-center gap-1.5 text-sm text-indigo-400 hover:text-indigo-300 no-underline">
+            <MessageCircle className="w-4 h-4" />
+            {t.comments_title}
+          </Link>
           <div className="text-sm text-slate-500">
             {t.footer_data}
           </div>

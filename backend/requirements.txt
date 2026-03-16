@@ -14,3 +14,4 @@ httpx==0.28.1
 aiosqlite==0.20.0
 python-multipart==0.0.20
 sse-starlette==2.2.1
+psycopg2-binary==2.9.10

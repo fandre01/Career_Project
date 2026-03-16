@@ -151,6 +151,22 @@ const en = {
   compare_emptyTitle: 'Compare Careers Side by Side',
   compare_emptyDesc: 'Select 2-4 careers to compare their AI automation risk, salary projections, and key metrics.',
   compare_startComparing: 'Start Comparing',
+
+  // Engagement - Comments
+  comments_title: 'Community Comments',
+  comments_subtitle: 'Share your thoughts about the future of work',
+  comments_name: 'Your Name',
+  comments_message: 'Your Message',
+  comments_submit: 'Post Comment',
+  comments_submitting: 'Posting...',
+  comments_empty: 'No comments yet. Be the first!',
+  comments_rateLimited: 'Please wait before posting another comment.',
+  comments_loadMore: 'Load More Comments',
+  comments_charLimit: 'characters remaining',
+
+  // Engagement - Views
+  views_totalVisitors: 'Total Visitors',
+  views_todayVisitors: "Today's Visitors",
 };
 
 const fr: TranslationKeys = {
@@ -271,6 +287,22 @@ const fr: TranslationKeys = {
   compare_emptyTitle: 'Comparer les carrières côte à côte',
   compare_emptyDesc: 'Sélectionnez 2 à 4 carrières pour comparer leur risque d\'automatisation par l\'IA, les projections salariales et les indicateurs clés.',
   compare_startComparing: 'Commencer la comparaison',
+
+  // Engagement - Comments
+  comments_title: 'Commentaires de la communauté',
+  comments_subtitle: "Partagez vos réflexions sur l'avenir du travail",
+  comments_name: 'Votre nom',
+  comments_message: 'Votre message',
+  comments_submit: 'Publier le commentaire',
+  comments_submitting: 'Publication...',
+  comments_empty: 'Aucun commentaire pour le moment. Soyez le premier !',
+  comments_rateLimited: 'Veuillez patienter avant de publier un autre commentaire.',
+  comments_loadMore: 'Charger plus de commentaires',
+  comments_charLimit: 'caractères restants',
+
+  // Engagement - Views
+  views_totalVisitors: 'Visiteurs totaux',
+  views_todayVisitors: "Visiteurs d'aujourd'hui",
 };
 
 const es: TranslationKeys = {
@@ -391,6 +423,22 @@ const es: TranslationKeys = {
   compare_emptyTitle: 'Comparar carreras lado a lado',
   compare_emptyDesc: 'Seleccione de 2 a 4 carreras para comparar su riesgo de automatización por IA, proyecciones salariales y métricas clave.',
   compare_startComparing: 'Comenzar a comparar',
+
+  // Engagement - Comments
+  comments_title: 'Comentarios de la comunidad',
+  comments_subtitle: 'Comparte tus ideas sobre el futuro del trabajo',
+  comments_name: 'Tu nombre',
+  comments_message: 'Tu mensaje',
+  comments_submit: 'Publicar comentario',
+  comments_submitting: 'Publicando...',
+  comments_empty: 'Aún no hay comentarios. ¡Sé el primero!',
+  comments_rateLimited: 'Por favor espera antes de publicar otro comentario.',
+  comments_loadMore: 'Cargar más comentarios',
+  comments_charLimit: 'caracteres restantes',
+
+  // Engagement - Views
+  views_totalVisitors: 'Visitantes totales',
+  views_todayVisitors: 'Visitantes de hoy',
 };
 
 const pt: TranslationKeys = {
@@ -511,6 +559,22 @@ const pt: TranslationKeys = {
   compare_emptyTitle: 'Comparar carreiras lado a lado',
   compare_emptyDesc: 'Selecione de 2 a 4 carreiras para comparar o risco de automação por IA, projeções salariais e métricas principais.',
   compare_startComparing: 'Começar a comparar',
+
+  // Engagement - Comments
+  comments_title: 'Comentários da comunidade',
+  comments_subtitle: 'Compartilhe suas ideias sobre o futuro do trabalho',
+  comments_name: 'Seu nome',
+  comments_message: 'Sua mensagem',
+  comments_submit: 'Publicar comentário',
+  comments_submitting: 'Publicando...',
+  comments_empty: 'Nenhum comentário ainda. Seja o primeiro!',
+  comments_rateLimited: 'Por favor aguarde antes de publicar outro comentário.',
+  comments_loadMore: 'Carregar mais comentários',
+  comments_charLimit: 'caracteres restantes',
+
+  // Engagement - Views
+  views_totalVisitors: 'Total de visitantes',
+  views_todayVisitors: 'Visitantes de hoje',
 };
 
 const de: TranslationKeys = {
@@ -631,6 +695,22 @@ const de: TranslationKeys = {
   compare_emptyTitle: 'Karrieren nebeneinander vergleichen',
   compare_emptyDesc: 'Wählen Sie 2 bis 4 Karrieren aus, um ihr KI-Automatisierungsrisiko, Gehaltsprognosen und wichtige Kennzahlen zu vergleichen.',
   compare_startComparing: 'Vergleich starten',
+
+  // Engagement - Comments
+  comments_title: 'Community-Kommentare',
+  comments_subtitle: 'Teilen Sie Ihre Gedanken zur Zukunft der Arbeit',
+  comments_name: 'Ihr Name',
+  comments_message: 'Ihre Nachricht',
+  comments_submit: 'Kommentar veröffentlichen',
+  comments_submitting: 'Wird veröffentlicht...',
+  comments_empty: 'Noch keine Kommentare. Seien Sie der Erste!',
+  comments_rateLimited: 'Bitte warten Sie, bevor Sie einen weiteren Kommentar veröffentlichen.',
+  comments_loadMore: 'Mehr Kommentare laden',
+  comments_charLimit: 'Zeichen übrig',
+
+  // Engagement - Views
+  views_totalVisitors: 'Gesamtbesucher',
+  views_todayVisitors: 'Heutige Besucher',
 };
 
 const zh: TranslationKeys = {
@@ -751,6 +831,22 @@ const zh: TranslationKeys = {
   compare_emptyTitle: '并排比较职业',
   compare_emptyDesc: '选择2到4个职业，比较其AI自动化风险、薪资预测和关键指标。',
   compare_startComparing: '开始比较',
+
+  // Engagement - Comments
+  comments_title: '社区评论',
+  comments_subtitle: '分享您对未来工作的看法',
+  comments_name: '您的姓名',
+  comments_message: '您的留言',
+  comments_submit: '发表评论',
+  comments_submitting: '发布中...',
+  comments_empty: '暂无评论。成为第一个评论者！',
+  comments_rateLimited: '请稍等再发表下一条评论。',
+  comments_loadMore: '加载更多评论',
+  comments_charLimit: '剩余字符',
+
+  // Engagement - Views
+  views_totalVisitors: '总访客数',
+  views_todayVisitors: '今日访客',
 };
 
 const ar: TranslationKeys = {
@@ -871,6 +967,22 @@ const ar: TranslationKeys = {
   compare_emptyTitle: 'قارن المهن جنبًا إلى جنب',
   compare_emptyDesc: 'اختر من 2 إلى 4 مهن لمقارنة مخاطر الأتمتة بالذكاء الاصطناعي وتوقعات الرواتب والمقاييس الرئيسية.',
   compare_startComparing: 'ابدأ المقارنة',
+
+  // Engagement - Comments
+  comments_title: 'تعليقات المجتمع',
+  comments_subtitle: 'شارك أفكارك حول مستقبل العمل',
+  comments_name: 'اسمك',
+  comments_message: 'رسالتك',
+  comments_submit: 'نشر التعليق',
+  comments_submitting: 'جارٍ النشر...',
+  comments_empty: 'لا توجد تعليقات بعد. كن أول من يعلق!',
+  comments_rateLimited: 'يرجى الانتظار قبل نشر تعليق آخر.',
+  comments_loadMore: 'تحميل المزيد من التعليقات',
+  comments_charLimit: 'أحرف متبقية',
+
+  // Engagement - Views
+  views_totalVisitors: 'إجمالي الزوار',
+  views_todayVisitors: 'زوار اليوم',
 };
 
 const hi: TranslationKeys = {
@@ -991,6 +1103,22 @@ const hi: TranslationKeys = {
   compare_emptyTitle: 'करियर की साथ-साथ तुलना करें',
   compare_emptyDesc: 'AI स्वचालन जोखिम, वेतन अनुमान और प्रमुख मापदंडों की तुलना करने के लिए 2 से 4 करियर चुनें।',
   compare_startComparing: 'तुलना शुरू करें',
+
+  // Engagement - Comments
+  comments_title: 'समुदाय की टिप्पणियाँ',
+  comments_subtitle: 'काम के भविष्य के बारे में अपने विचार साझा करें',
+  comments_name: 'आपका नाम',
+  comments_message: 'आपका संदेश',
+  comments_submit: 'टिप्पणी पोस्ट करें',
+  comments_submitting: 'पोस्ट हो रहा है...',
+  comments_empty: 'अभी तक कोई टिप्पणी नहीं। पहले बनें!',
+  comments_rateLimited: 'कृपया एक और टिप्पणी पोस्ट करने से पहले प्रतीक्षा करें।',
+  comments_loadMore: 'और टिप्पणियाँ लोड करें',
+  comments_charLimit: 'अक्षर शेष',
+
+  // Engagement - Views
+  views_totalVisitors: 'कुल आगंतुक',
+  views_todayVisitors: 'आज के आगंतुक',
 };
 
 const ja: TranslationKeys = {
@@ -1111,6 +1239,22 @@ const ja: TranslationKeys = {
   compare_emptyTitle: 'キャリアを並べて比較',
   compare_emptyDesc: '2〜4つのキャリアを選択して、AI自動化リスク、給与予測、主要指標を比較しましょう。',
   compare_startComparing: '比較を開始',
+
+  // Engagement - Comments
+  comments_title: 'コミュニティコメント',
+  comments_subtitle: '仕事の未来についてあなたの考えを共有してください',
+  comments_name: 'お名前',
+  comments_message: 'メッセージ',
+  comments_submit: 'コメントを投稿',
+  comments_submitting: '投稿中...',
+  comments_empty: 'まだコメントはありません。最初のコメントを投稿しましょう！',
+  comments_rateLimited: '次のコメントを投稿する前にお待ちください。',
+  comments_loadMore: 'さらにコメントを読み込む',
+  comments_charLimit: '文字残り',
+
+  // Engagement - Views
+  views_totalVisitors: '総訪問者数',
+  views_todayVisitors: '本日の訪問者',
 };
 
 const ko: TranslationKeys = {
@@ -1231,6 +1375,22 @@ const ko: TranslationKeys = {
   compare_emptyTitle: '커리어를 나란히 비교',
   compare_emptyDesc: '2~4개의 커리어를 선택하여 AI 자동화 위험, 급여 전망 및 주요 지표를 비교하세요.',
   compare_startComparing: '비교 시작',
+
+  // Engagement - Comments
+  comments_title: '커뮤니티 댓글',
+  comments_subtitle: '일의 미래에 대한 생각을 공유하세요',
+  comments_name: '이름',
+  comments_message: '메시지',
+  comments_submit: '댓글 게시',
+  comments_submitting: '게시 중...',
+  comments_empty: '아직 댓글이 없습니다. 첫 번째로 작성하세요!',
+  comments_rateLimited: '다음 댓글을 게시하기 전에 잠시 기다려 주세요.',
+  comments_loadMore: '댓글 더 보기',
+  comments_charLimit: '자 남음',
+
+  // Engagement - Views
+  views_totalVisitors: '총 방문자',
+  views_todayVisitors: '오늘의 방문자',
 };
 
 const sw: TranslationKeys = {
@@ -1351,6 +1511,22 @@ const sw: TranslationKeys = {
   compare_emptyTitle: 'Linganisha kazi kwa upande',
   compare_emptyDesc: 'Chagua kazi 2 hadi 4 kulinganisha hatari ya otomatiki ya AI, makadirio ya mishahara na vipimo muhimu.',
   compare_startComparing: 'Anza kulinganisha',
+
+  // Engagement - Comments
+  comments_title: 'Maoni ya Jamii',
+  comments_subtitle: 'Shiriki mawazo yako kuhusu mustakabali wa kazi',
+  comments_name: 'Jina lako',
+  comments_message: 'Ujumbe wako',
+  comments_submit: 'Chapisha maoni',
+  comments_submitting: 'Inachapisha...',
+  comments_empty: 'Hakuna maoni bado. Kuwa wa kwanza!',
+  comments_rateLimited: 'Tafadhali subiri kabla ya kuchapisha maoni mengine.',
+  comments_loadMore: 'Pakia maoni zaidi',
+  comments_charLimit: 'herufi zimebaki',
+
+  // Engagement - Views
+  views_totalVisitors: 'Wageni wote',
+  views_todayVisitors: 'Wageni wa leo',
 };
 
 const ru: TranslationKeys = {
@@ -1471,6 +1647,22 @@ const ru: TranslationKeys = {
   compare_emptyTitle: 'Сравните карьеры бок о бок',
   compare_emptyDesc: 'Выберите от 2 до 4 карьер для сравнения рисков автоматизации ИИ, прогнозов зарплат и ключевых показателей.',
   compare_startComparing: 'Начать сравнение',
+
+  // Engagement - Comments
+  comments_title: 'Комментарии сообщества',
+  comments_subtitle: 'Поделитесь своими мыслями о будущем работы',
+  comments_name: 'Ваше имя',
+  comments_message: 'Ваше сообщение',
+  comments_submit: 'Опубликовать комментарий',
+  comments_submitting: 'Публикация...',
+  comments_empty: 'Комментариев пока нет. Будьте первым!',
+  comments_rateLimited: 'Пожалуйста, подождите перед публикацией следующего комментария.',
+  comments_loadMore: 'Загрузить ещё комментарии',
+  comments_charLimit: 'символов осталось',
+
+  // Engagement - Views
+  views_totalVisitors: 'Всего посетителей',
+  views_todayVisitors: 'Посетителей сегодня',
 };
 
 const ht: TranslationKeys = {
@@ -1591,6 +1783,22 @@ const ht: TranslationKeys = {
   compare_emptyTitle: 'Konpare karyè bò kote bò kote',
   compare_emptyDesc: 'Chwazi 2 a 4 karyè pou konpare risk otomatizasyon IA, pwojeksyon salè ak mezi kle yo.',
   compare_startComparing: 'Kòmanse konpare',
+
+  // Engagement - Comments
+  comments_title: 'Kòmantè Kominote a',
+  comments_subtitle: 'Pataje lide ou sou lavni travay',
+  comments_name: 'Non ou',
+  comments_message: 'Mesaj ou',
+  comments_submit: 'Pibliye kòmantè',
+  comments_submitting: 'Ap pibliye...',
+  comments_empty: 'Pa gen kòmantè ankò. Se ou ki premye!',
+  comments_rateLimited: 'Tanpri tann anvan ou pibliye yon lòt kòmantè.',
+  comments_loadMore: 'Chaje plis kòmantè',
+  comments_charLimit: 'karaktè ki rete',
+
+  // Engagement - Views
+  views_totalVisitors: 'Total vizitè',
+  views_todayVisitors: 'Vizitè jodi a',
 };
 
 export const translations: Record<LangCode, TranslationKeys> = {

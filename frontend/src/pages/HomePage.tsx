@@ -4,6 +4,8 @@ import { Shield, TrendingUp, AlertTriangle, Sparkles, ArrowRight, Brain, Target,
 import StatCard from '../components/common/StatCard';
 import RiskBadge from '../components/common/RiskBadge';
 import { SkeletonCard } from '../components/common/Skeleton';
+import ViewCounter from '../components/common/ViewCounter';
+import CommentsSection from '../components/sections/CommentsSection';
 import { fetchStats, fetchTopRisk, fetchTopSafe } from '../api/careers';
 import { formatSalary } from '../utils/formatters';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -132,6 +134,11 @@ export default function HomePage() {
         </section>
       )}
 
+      {/* Visitor Stats */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+        <ViewCounter />
+      </section>
+
       {/* Top Risk & Safe */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -188,6 +195,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Comments */}
+      <CommentsSection />
 
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">

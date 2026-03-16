@@ -2,6 +2,7 @@ from backend.models.career import Career
 from backend.models.skill import CareerSkill
 from backend.models.prediction import Prediction, EnsemblePrediction
 from backend.models.chat_session import ChatSession, ChatMessage
+from backend.models.engagement import Comment, PageView
 
 __all__ = [
     "Career",
@@ -10,4 +11,6 @@ __all__ = [
     "EnsemblePrediction",
     "ChatSession",
     "ChatMessage",
+    "Comment",
+    "PageView",
 ]
