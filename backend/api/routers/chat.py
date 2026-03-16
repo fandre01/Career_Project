@@ -1,5 +1,7 @@
+import json
 import logging
-from fastapi import APIRouter, Depends, HTTPException
+from uuid import uuid4
+from fastapi import APIRouter, Depends
 from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 from backend.db.database import get_db
@@ -17,32 +19,43 @@ router = APIRouter(prefix="/api/chat", tags=["chat"])
 async def chat(request: ChatRequest, db: Session = Depends(get_db)):
     service = FabriceAIService(db)
 
-    if request.session_id:
-        session = db.query(ChatSession).filter(ChatSession.id == request.session_id).first()
-        if not session:
-            raise HTTPException(status_code=404, detail="Session not found")
-        session.last_active = datetime.now(timezone.utc)
-    else:
-        session = ChatSession()
-        db.add(session)
-        db.commit()
-        db.refresh(session)
+    # Try to create/find session in DB, but don't crash if DB fails
+    session_id = request.session_id or str(uuid4())
+    try:
+        if request.session_id:
+            session = db.query(ChatSession).filter(ChatSession.id == request.session_id).first()
+            if session:
+                session.last_active = datetime.now(timezone.utc)
+                session_id = session.id
+            else:
+                session = ChatSession(id=session_id)
+                db.add(session)
+                db.commit()
+        else:
+            session = ChatSession(id=session_id)
+            db.add(session)
+            db.commit()
 
-    user_msg = ChatMessage(
-        session_id=session.id,
-        role="user",
-        content=request.message,
-    )
-    db.add(user_msg)
-    db.commit()
+        user_msg = ChatMessage(
+            session_id=session_id,
+            role="user",
+            content=request.message,
+        )
+        db.add(user_msg)
+        db.commit()
+    except Exception as e:
+        logger.error(f"Chat DB error (non-fatal): {e}")
+        try:
+            db.rollback()
+        except Exception:
+            pass
 
     async def generate():
-        import json
         full_response = ""
-        yield f"data: {{\"session_id\": \"{session.id}\"}}\n\n"
+        yield f"data: {json.dumps({'session_id': session_id})}\n\n"
 
         try:
-            async for chunk in service.stream_response(session.id, request.message):
+            async for chunk in service.stream_response(session_id, request.message):
                 full_response += chunk
                 yield f"data: {json.dumps({'content': chunk})}\n\n"
         except Exception as e:
@@ -51,32 +64,48 @@ async def chat(request: ChatRequest, db: Session = Depends(get_db)):
             yield f"data: {json.dumps({'content': error_msg})}\n\n"
             full_response = error_msg
 
+        # Try to save assistant response, but don't crash if DB fails
         if full_response:
-            assistant_msg = ChatMessage(
-                session_id=session.id,
-                role="assistant",
-                content=full_response,
-            )
-            db.add(assistant_msg)
-            db.commit()
+            try:
+                assistant_msg = ChatMessage(
+                    session_id=session_id,
+                    role="assistant",
+                    content=full_response,
+                )
+                db.add(assistant_msg)
+                db.commit()
+            except Exception:
+                try:
+                    db.rollback()
+                except Exception:
+                    pass
 
-        yield "data: {\"done\": true}\n\n"
+        yield f"data: {json.dumps({'done': True})}\n\n"
 
-    return StreamingResponse(generate(), media_type="text/event-stream")
+    return StreamingResponse(
+        generate(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no",
+        },
+    )
 
 
 @router.get("/{session_id}/history", response_model=ChatHistoryResponse)
 def chat_history(session_id: str, db: Session = Depends(get_db)):
-    session = db.query(ChatSession).filter(ChatSession.id == session_id).first()
-    if not session:
-        raise HTTPException(status_code=404, detail="Session not found")
-
-    messages = (
-        db.query(ChatMessage)
-        .filter(ChatMessage.session_id == session_id)
-        .order_by(ChatMessage.created_at.asc())
-        .all()
-    )
+    messages = []
+    try:
+        session = db.query(ChatSession).filter(ChatSession.id == session_id).first()
+        if session:
+            messages = (
+                db.query(ChatMessage)
+                .filter(ChatMessage.session_id == session_id)
+                .order_by(ChatMessage.created_at.asc())
+                .all()
+            )
+    except Exception:
+        pass
 
     return ChatHistoryResponse(
         session_id=session_id,
