@@ -245,7 +245,7 @@ class FabriceAIService:
         )
 
     async def stream_response(self, session_id: str, user_message: str) -> AsyncGenerator[str, None]:
-        # If we have an API key, use Claude
+        # If we have an API key, try Claude first
         if self._has_api_key and self.client:
             history = self._get_chat_history(session_id)
             career_context = self._find_career_context(user_message)
@@ -258,6 +258,8 @@ class FabriceAIService:
             messages.append({"role": "user", "content": enriched_message})
 
             try:
+                # Collect Claude's response chunks
+                chunks: list[str] = []
                 with self.client.messages.stream(
                     model="claude-sonnet-4-20250514",
                     max_tokens=1024,
@@ -265,8 +267,13 @@ class FabriceAIService:
                     messages=messages,
                 ) as stream:
                     for text in stream.text_stream:
-                        yield text
-                return
+                        chunks.append(text)
+
+                # If we got chunks, yield them all
+                if chunks:
+                    for chunk in chunks:
+                        yield chunk
+                    return
             except Exception:
                 pass  # Fall through to fallback
 

@@ -34,21 +34,27 @@ async def chat(request: ChatRequest, db: Session = Depends(get_db)):
     db.commit()
 
     async def generate():
+        import json
         full_response = ""
         yield f"data: {{\"session_id\": \"{session.id}\"}}\n\n"
 
-        async for chunk in service.stream_response(session.id, request.message):
-            full_response += chunk
-            import json
-            yield f"data: {json.dumps({'content': chunk})}\n\n"
+        try:
+            async for chunk in service.stream_response(session.id, request.message):
+                full_response += chunk
+                yield f"data: {json.dumps({'content': chunk})}\n\n"
+        except Exception as e:
+            error_msg = "Sorry, I encountered an error. Please try again!"
+            yield f"data: {json.dumps({'content': error_msg})}\n\n"
+            full_response = error_msg
 
-        assistant_msg = ChatMessage(
-            session_id=session.id,
-            role="assistant",
-            content=full_response,
-        )
-        db.add(assistant_msg)
-        db.commit()
+        if full_response:
+            assistant_msg = ChatMessage(
+                session_id=session.id,
+                role="assistant",
+                content=full_response,
+            )
+            db.add(assistant_msg)
+            db.commit()
 
         yield "data: {\"done\": true}\n\n"
 
