@@ -593,6 +593,248 @@ SKILLS_BY_CATEGORY = {
 }
 
 
+# ── Career-specific risk overrides ──
+# These override the generic category-based risk calculation
+# to ensure careers have realistic AI risk scores.
+# Scale: 0-100 (0 = no AI risk, 100 = fully automatable)
+CAREER_RISK_OVERRIDES = {
+    # === VERY LOW RISK (5-15%) — AI simply cannot replace these ===
+    "Clergy": 8,                       # Spiritual guidance, pastoral care, faith — deeply human
+    "Surgeon": 10,                     # Complex physical surgery, split-second decisions, dexterity
+    "Firefighter": 7,                  # Unpredictable emergencies, physical danger, courage
+    "Police Officer": 12,              # Law enforcement, physical intervention, judgment calls
+    "Athlete": 5,                      # Physical competition — AI cannot compete in sports
+    "Military Officer": 10,            # Combat leadership, strategy under pressure
+    "Emergency Medical Technician": 12,# Emergency response, unpredictable field conditions
+    "Psychiatrist": 14,                # Deep human emotional connection, therapy, trust
+    "Psychologist": 15,                # Understanding human behavior, empathy, therapy
+    "Dentist": 13,                     # Fine motor skills, patient interaction, in-mouth work
+    "Physician (General)": 15,         # Patient relationships, physical exams, complex diagnosis
+    "Nurse Practitioner": 14,          # Hands-on patient care, emotional support
+    "Registered Nurse": 15,            # Bedside care, emotional support, physical tasks
+    "Physical Therapist": 13,          # Hands-on physical manipulation, motivation
+    "Occupational Therapist": 14,      # Personal rehabilitation, adaptive strategies
+    "Speech-Language Pathologist": 15, # In-person therapy, patient rapport
+    "Veterinarian": 14,                # Animal handling, surgery, unpredictable patients
+    "Social Worker": 16,               # Human relationships, crisis intervention, empathy
+    "Substance Abuse Counselor": 14,   # Recovery support, human connection, trust
+    "Preschool Teacher": 12,           # Young children need human care, bonding
+    "Special Education Teacher": 13,   # Individualized human attention, patience
+    "Elementary School Teacher": 16,   # Children need human teachers, mentorship
+    "School Counselor": 15,            # Emotional support, personal guidance
+    "Mediator": 16,                    # Reading people, negotiation, human judgment
+    "Judge": 12,                       # Legal judgment, moral reasoning, authority
+    "Chef/Head Cook": 15,              # Creativity, taste, physical cooking
+    "Musician": 14,                    # Live performance, emotion, artistic expression
+    "Film Director": 16,               # Creative vision, human storytelling
+    "Fitness Trainer": 12,             # Physical demonstration, motivation, personal touch
+    "Athletic Trainer": 13,            # Hands-on injury treatment, physical assessment
+    "Ship Captain": 15,                # Navigation in unpredictable conditions, crew leadership
+    "Electrician": 14,                 # Physical work in varied environments, problem solving
+    "Plumber": 13,                     # Physical work in tight spaces, troubleshooting
+    "Carpenter": 14,                   # Custom physical craftsmanship
+    "HVAC Technician": 16,             # On-site physical repairs, varied systems
+    "Construction Manager": 18,        # On-site leadership, unpredictable conditions
+    "Elevator Installer": 14,          # Specialized physical installation
+    "Flight Attendant": 15,            # Safety, human interaction, emergency response
+    "Airline Pilot": 18,               # Despite autopilot, critical judgment in emergencies
+    "Air Traffic Controller": 20,      # High-stakes split-second decisions (some AI assist)
+    "Bartender": 15,                   # Social interaction, creativity, atmosphere
+
+    # === LOW RISK (18-29%) — Mostly human but AI can assist somewhat ===
+    "Lawyer": 22,                      # Legal strategy, courtroom advocacy, client trust
+    "High School Teacher": 20,         # Teaching, mentoring, classroom management
+    "University Professor": 22,        # Research, mentoring, lectures (some AI-assisted grading)
+    "Architect": 25,                   # Creative design (AI assists but doesn't replace vision)
+    "Photographer": 22,                # Artistic eye, client interaction, unique moments
+    "Hotel Manager": 20,               # Hospitality, staff management, guest relations
+    "Event Planner": 22,               # Coordination, creativity, people management
+    "Restaurant Manager": 20,          # Staff management, customer relations, operations
+    "Tour Guide": 20,                  # Personal storytelling, cultural knowledge, charisma
+    "Probation Officer": 22,           # Supervising individuals, human judgment
+    "Immigration Officer": 24,         # Interviews, judgment, security assessment
+    "HR Manager": 24,                  # People management, conflict resolution
+    "Sales Manager": 25,               # Relationship building, team leadership
+    "Farm Manager": 22,                # Physical farm operations, weather adaptation
+    "Wildlife Biologist": 22,          # Fieldwork, animal observation, environmental work
+    "Forester": 20,                    # Outdoor fieldwork, ecosystem management
+    "Conservation Scientist": 22,      # Field research, environmental management
+    "Production Manager": 28,          # Factory oversight, staff management
+    "Diesel Mechanic": 18,             # Hands-on repair work
+    "Heavy Equipment Operator": 22,    # Physical operation (some automation coming)
+    "Welder": 25,                      # Skilled manual work (robotic welding exists but limited)
+    "Interior Designer": 24,           # Creative vision, client relationships
+    "Art Director": 25,                # Creative leadership and vision
+    "Marketing Manager": 28,           # Strategy, creativity (AI assists with analytics)
+    "Funeral Director": 12,            # Deeply personal, emotional support, ceremonies
+
+    # === MEDIUM RISK (30-49%) — AI will significantly change these jobs ===
+    "Graphic Designer": 42,            # AI image generation is advancing rapidly
+    "Animator": 40,                    # AI animation tools emerging
+    "Writer/Author": 45,              # AI can generate text (but human creativity still valued)
+    "Journalist": 42,                  # AI can write basic news articles
+    "Copywriter": 48,                 # AI excels at marketing copy
+    "Content Strategist": 38,         # Strategy is human, but AI assists heavily
+    "Social Media Manager": 35,       # AI scheduling and content, but strategy is human
+    "Public Relations Specialist": 30, # Relationship-driven but AI assists with analytics
+    "Paralegal": 45,                   # Legal research heavily automatable
+    "Accountant": 42,                  # Many accounting tasks are automatable
+    "Auditor": 45,                     # Pattern detection, data analysis — AI strengths
+    "Financial Analyst": 38,           # AI analytics, but interpretation needs humans
+    "Budget Analyst": 42,              # Spreadsheet and analysis work
+    "Credit Analyst": 45,              # Data-driven decisions, AI excels
+    "Compliance Officer": 35,          # Monitoring rules — AI assists but judgment needed
+    "Compliance Analyst": 40,          # Regulatory monitoring, document review
+    "Librarian": 35,                   # Information retrieval changing, but community role remains
+    "Radiologic Technologist": 38,     # AI reading scans, but positioning patients is physical
+    "Medical Lab Technician": 40,      # Lab automation advancing
+    "Pharmacist": 38,                  # Dispensing automatable, but counseling is human
+    "Optometrist": 30,                 # AI-assisted diagnosis, but exams are physical
+    "Web Developer": 45,               # AI code generation advancing rapidly
+    "QA Engineer": 42,                 # Automated testing expanding
+    "IT Support Specialist": 40,       # AI chatbots handling basic support
+    "Database Administrator": 40,      # Cloud automation reducing manual DB work
+    "Network Administrator": 38,       # Cloud and automation changing the role
+    "Wholesale Sales Rep": 35,         # B2B relationships matter, but AI streamlines
+    "Insurance Agent": 35,             # AI quoting, but relationships drive sales
+    "Real Estate Agent": 30,           # Zillow/AI tools, but human negotiation key
+    "Real Estate Appraiser": 40,       # AI valuation models advancing
+    "Surveyor": 35,                    # Drone/GPS tech, but fieldwork remains
+    "Interpreter/Translator": 48,      # AI translation quality improving dramatically
+    "Instructional Designer": 35,      # AI assists with content creation
+    "Statistician": 40,                # AI handles many statistical tasks
+    "Supply Chain Analyst": 38,        # AI optimization, but strategy is human
+    "Logistics Manager": 30,           # Coordination is human, AI optimizes routes
+    "Investment Banker": 32,           # Relationship-driven, AI assists with analysis
+    "Management Consultant": 30,       # Strategy and client relations are human
+    "Recruiter": 35,                   # AI screening, but human judgment for culture fit
+    "Train Engineer": 35,              # Autonomous trains coming but slowly
+    "Pharmaceutical Sales Rep": 32,    # Relationships matter, but AI targets better
+
+    # === HIGH RISK (50-75%) — AI will likely replace significant portions ===
+    "Bookkeeper": 72,                  # Highly automatable with accounting software + AI
+    "Tax Preparer": 70,                # TurboTax + AI handling most tax prep
+    "Insurance Underwriter": 68,       # AI risk assessment replacing manual underwriting
+    "Loan Officer": 58,                # AI credit scoring, automated approvals
+    "Legal Secretary": 65,             # Document automation, scheduling AI
+    "Court Reporter": 72,              # Speech-to-text AI improving rapidly
+    "Retail Salesperson": 52,          # Self-checkout, online shopping
+    "Cashier": 75,                     # Self-checkout, mobile payments
+    "Telemarketer": 78,               # AI calling systems, chatbots
+    "Travel Agent": 72,                # Online booking platforms dominating
+    "Receptionist": 60,                # AI receptionists, automated systems
+    "Payroll Clerk": 70,               # Payroll software automation
+    "Billing Specialist": 65,          # Automated billing systems
+    "Medical Records Specialist": 58,  # EHR automation, AI classification
+    "Warehouse Worker": 62,            # Robotics and automation advancing
+    "Delivery Driver": 55,             # Autonomous vehicles coming (but slowly)
+    "Bus Driver": 50,                  # Autonomous buses in testing
+    "Truck Driver": 52,                # Self-driving trucks progressing
+    "Machinist": 55,                   # CNC automation expanding
+    "CNC Operator": 60,               # Increasing automation
+    "Manufacturing Engineer": 35,      # Designs processes (harder to automate)
+
+    # === VERY HIGH / CRITICAL RISK (76-95%) — AI is actively replacing these ===
+    "Data Entry Clerk": 92,            # Almost fully automatable with AI/OCR
+    "File Clerk": 88,                  # Digital filing systems replacing physical
+    "Mail Clerk": 85,                  # Email replacing physical mail, automation
+    "Transcriptionist": 90,            # AI transcription nearly matches human accuracy
+    "Assembly Line Worker": 80,        # Robotics replacing assembly work
+    "Packaging Operator": 78,          # Automated packaging systems
+    "Textile Worker": 75,              # Automated textile manufacturing
+    "Printing Press Operator": 78,     # Digital printing, declining demand
+    "Quality Inspector": 65,           # AI vision systems for quality control
+
+    # === Remaining careers — Technology ===
+    "Software Developer": 32,          # AI code generation helps but creativity/architecture still human
+    "Data Scientist": 35,              # AI automates some analysis, but insight is human
+    "Cybersecurity Analyst": 22,       # AI assists, but adversarial thinking is human
+    "AI/Machine Learning Engineer": 18,# Ironically, building AI is hard to automate
+    "Cloud Architect": 25,             # Design decisions require human judgment
+    "DevOps Engineer": 30,             # Automation tools help but complex ops need humans
+    "Mobile App Developer": 38,        # AI code gen advancing, but design is human
+    "Systems Analyst": 35,             # Business understanding + tech, partially automatable
+    "IT Project Manager": 25,          # People management, coordination
+    "UX Designer": 28,                 # Human empathy and design thinking
+    "Blockchain Developer": 30,        # Niche, complex architecture
+    "Computer Vision Engineer": 22,    # Building AI systems, specialized
+    "Robotics Engineer": 20,           # Physical + software, complex
+    "Data Engineer": 35,               # Pipeline automation advancing
+    "Full Stack Developer": 35,        # AI assists but full-stack requires broad judgment
+
+    # === Remaining careers — Healthcare ===
+    "Dental Hygienist": 18,            # Hands-on mouth work, patient comfort
+    "Respiratory Therapist": 16,       # Critical care, patient monitoring
+    "Physician Assistant": 16,         # Hands-on patient care
+    "Home Health Aide": 10,            # Personal care, companionship, physical tasks
+
+    # === Remaining careers — Finance ===
+    "Financial Manager": 25,           # Strategy and leadership, AI assists
+    "Actuary": 42,                     # Math-heavy, AI can model risk
+    "Risk Manager": 32,                # Judgment needed, but AI assists analysis
+
+    # === Remaining careers — Education ===
+    "Education Administrator": 22,     # Leadership, school management
+    "ESL Teacher": 20,                 # Language teaching needs human interaction
+
+    # === Remaining careers — Engineering ===
+    "Mechanical Engineer": 25,         # Design and physical testing
+    "Electrical Engineer": 25,         # Design and hardware work
+    "Civil Engineer": 22,              # Site work, safety judgment
+    "Chemical Engineer": 25,           # Lab and process work
+    "Aerospace Engineer": 22,          # Complex systems, safety-critical
+    "Biomedical Engineer": 22,         # Medical device design, patient safety
+    "Environmental Engineer": 22,      # Fieldwork, environmental assessment
+    "Industrial Engineer": 30,         # Process optimization, AI assists
+    "Nuclear Engineer": 20,            # Safety-critical, highly specialized
+    "Petroleum Engineer": 25,          # Fieldwork, geological judgment
+    "Structural Engineer": 22,         # Safety-critical design
+    "Materials Engineer": 25,          # Lab testing, material science
+
+    # === Remaining careers — Creative ===
+    "Video Producer": 30,              # AI assists editing, but creative vision is human
+
+    # === Remaining careers — Science ===
+    "Biologist": 22,                   # Lab and field research
+    "Chemist": 25,                     # Lab experiments, analysis
+    "Physicist": 20,                   # Theoretical and experimental work
+    "Environmental Scientist": 22,     # Fieldwork, environmental assessment
+    "Geologist": 22,                   # Fieldwork, rock/soil analysis
+    "Epidemiologist": 30,              # Data analysis heavy, AI assists
+    "Microbiologist": 25,              # Lab work, organism study
+    "Astronomer": 28,                  # Data analysis, but observation is specialized
+    "Research Scientist": 22,          # Original research, experimental design
+
+    # === Remaining careers — Trades ===
+    "Automotive Mechanic": 22,         # Hands-on diagnostics and repair
+    "Sheet Metal Worker": 25,          # Physical fabrication
+
+    # === Remaining careers — Social Services ===
+    "Urban Planner": 25,               # Community engagement, policy work
+    "Political Scientist": 25,         # Research and analysis, human judgment
+
+    # === Remaining careers — Real Estate ===
+    "Property Manager": 28,            # Tenant relations, building management
+
+    # === Remaining careers — Agriculture ===
+    "Agricultural Engineer": 25,       # Fieldwork, farm technology
+    "Food Scientist": 30,              # Lab testing, but some AI analysis
+
+    # === Remaining careers — Administrative (higher risk) ===
+    "Administrative Assistant": 72,    # Scheduling, filing, email — highly automatable
+    "Executive Assistant": 55,         # Higher-level judgment than admin assistant
+    "Office Manager": 48,              # Some coordination is human, but many tasks automatable
+
+    # === Remaining careers — Sales ===
+    "Real Estate Sales Agent": 30,     # Same as Real Estate Agent
+
+    # === Remaining careers — HR ===
+    "HR Specialist": 35,               # Screening automatable, but interviews are human
+    "Training & Development Manager": 28, # Program design, facilitation
+    "Compensation Analyst": 45,        # Data analysis, benchmarking — AI assists heavily
+}
+
+
 def seed_database():
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
@@ -652,17 +894,21 @@ def seed_database():
             ]
             base_risk = compute_career_automation_index(career_skills)
 
-            # Adjust risk based on career characteristics
-            if growth < 0:
-                base_risk = min(100, base_risk + 10)
-            if salary > 120000:
-                base_risk = max(5, base_risk - 8)
-            if education in ["Doctoral or professional degree", "Master's degree"]:
-                base_risk = max(5, base_risk - 12)
-            if category in ["Administrative", "Manufacturing"]:
-                base_risk = min(100, base_risk + 15)
-            if category in ["Healthcare", "Education", "Social Services"]:
-                base_risk = max(5, base_risk - 10)
+            # Apply career-specific override if available (much more accurate)
+            if title in CAREER_RISK_OVERRIDES:
+                base_risk = CAREER_RISK_OVERRIDES[title]
+            else:
+                # Fallback: adjust risk based on career characteristics
+                if growth < 0:
+                    base_risk = min(100, base_risk + 10)
+                if salary > 120000:
+                    base_risk = max(5, base_risk - 8)
+                if education in ["Doctoral or professional degree", "Master's degree"]:
+                    base_risk = max(5, base_risk - 12)
+                if category in ["Administrative", "Manufacturing"]:
+                    base_risk = min(100, base_risk + 15)
+                if category in ["Healthcare", "Education", "Social Services"]:
+                    base_risk = max(5, base_risk - 10)
 
             base_risk = max(5, min(95, base_risk))
 
