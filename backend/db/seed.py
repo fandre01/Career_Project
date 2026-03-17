@@ -672,7 +672,7 @@ CAREER_RISK_OVERRIDES = {
     "Graphic Designer": 42,            # AI image generation is advancing rapidly
     "Animator": 40,                    # AI animation tools emerging
     "Writer/Author": 45,              # AI can generate text (but human creativity still valued)
-    "Journalist": 42,                  # AI can write basic news articles
+    "Journalist": 35,                  # Investigative journalism, interviews, source-building — deeply human
     "Copywriter": 48,                 # AI excels at marketing copy
     "Content Strategist": 38,         # Strategy is human, but AI assists heavily
     "Social Media Manager": 35,       # AI scheduling and content, but strategy is human
@@ -685,21 +685,21 @@ CAREER_RISK_OVERRIDES = {
     "Credit Analyst": 45,              # Data-driven decisions, AI excels
     "Compliance Officer": 35,          # Monitoring rules — AI assists but judgment needed
     "Compliance Analyst": 40,          # Regulatory monitoring, document review
-    "Librarian": 35,                   # Information retrieval changing, but community role remains
-    "Radiologic Technologist": 38,     # AI reading scans, but positioning patients is physical
+    "Librarian": 22,                   # Community programs, story time, mentoring, research help — very human
+    "Radiologic Technologist": 22,     # Physically positioning patients, operating X-ray equipment — hands-on
     "Medical Lab Technician": 40,      # Lab automation advancing
-    "Pharmacist": 38,                  # Dispensing automatable, but counseling is human
-    "Optometrist": 30,                 # AI-assisted diagnosis, but exams are physical
+    "Pharmacist": 24,                  # Patient counseling, vaccinations, drug interaction checks — hands-on healthcare
+    "Optometrist": 18,                 # Physical eye exams, fitting lenses, patient interaction — hands-on healthcare
     "Web Developer": 45,               # AI code generation advancing rapidly
     "QA Engineer": 42,                 # Automated testing expanding
     "IT Support Specialist": 40,       # AI chatbots handling basic support
     "Database Administrator": 40,      # Cloud automation reducing manual DB work
     "Network Administrator": 38,       # Cloud and automation changing the role
-    "Wholesale Sales Rep": 35,         # B2B relationships matter, but AI streamlines
-    "Insurance Agent": 35,             # AI quoting, but relationships drive sales
+    "Wholesale Sales Rep": 25,         # B2B relationship building, in-person deals, trust
+    "Insurance Agent": 25,             # Relationship-driven sales, personal trust, client advising
     "Real Estate Agent": 30,           # Zillow/AI tools, but human negotiation key
     "Real Estate Appraiser": 40,       # AI valuation models advancing
-    "Surveyor": 35,                    # Drone/GPS tech, but fieldwork remains
+    "Surveyor": 24,                    # Physical fieldwork, climbing terrain, placing markers — mostly outdoors
     "Interpreter/Translator": 48,      # AI translation quality improving dramatically
     "Instructional Designer": 35,      # AI assists with content creation
     "Statistician": 40,                # AI handles many statistical tasks
@@ -707,8 +707,8 @@ CAREER_RISK_OVERRIDES = {
     "Logistics Manager": 30,           # Coordination is human, AI optimizes routes
     "Investment Banker": 32,           # Relationship-driven, AI assists with analysis
     "Management Consultant": 30,       # Strategy and client relations are human
-    "Recruiter": 35,                   # AI screening, but human judgment for culture fit
-    "Train Engineer": 35,              # Autonomous trains coming but slowly
+    "Recruiter": 28,                   # In-person interviews, relationship building, culture fit — human judgment
+    "Train Engineer": 28,              # Physical train operation, safety-critical decisions
     "Pharmaceutical Sales Rep": 32,    # Relationships matter, but AI targets better
 
     # === HIGH RISK (50-75%) — AI will likely replace significant portions ===
