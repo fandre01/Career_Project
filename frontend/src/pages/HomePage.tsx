@@ -170,7 +170,16 @@ export default function HomePage() {
         </div>
         <div className="flex items-start gap-2 bg-slate-800/30 border border-slate-700/30 rounded-xl p-4 max-w-3xl mx-auto">
           <Info className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-          <p className="text-sm text-slate-400">{t.home_howNote}</p>
+          <div>
+            <p className="text-sm text-slate-400">{t.home_howNote}</p>
+            <p className="text-sm text-slate-400 mt-2">
+              📊 Explore the dataset yourself:{' '}
+              <a href="https://www.onetonline.org/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
+                O*NET Online (onetonline.org)
+              </a>
+              {' '}— free and open to the public.
+            </p>
+          </div>
         </div>
       </section>
 

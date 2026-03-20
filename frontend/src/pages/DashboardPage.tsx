@@ -68,7 +68,12 @@ export default function DashboardPage() {
       {/* U.S. Data Note */}
       <div className="flex items-center gap-2 bg-slate-800/30 border border-slate-700/30 rounded-xl p-3 mb-6">
         <Info className="w-4 h-4 text-amber-400 flex-shrink-0" />
-        <p className="text-xs text-slate-400">{t.dash_usNote}</p>
+        <p className="text-xs text-slate-400">
+          {t.dash_usNote}{' '}
+          <a href="https://www.onetonline.org/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
+            O*NET Online (onetonline.org)
+          </a>
+        </p>
       </div>
 
       {/* Industry Breakdown Chart */}
