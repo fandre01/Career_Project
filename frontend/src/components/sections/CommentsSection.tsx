@@ -22,6 +22,7 @@ export default function CommentsSection() {
   const [comments, setComments] = useState<Comment[]>([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
+  const [showAll, setShowAll] = useState(false);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -110,7 +111,7 @@ export default function CommentsSection() {
         <p className="text-center text-slate-500 py-8">{t.comments_empty}</p>
       ) : (
         <div className="space-y-4">
-          {comments.map((c) => (
+          {(showAll ? comments : comments.slice(0, 2)).map((c) => (
             <div key={c.id} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-5">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-medium text-white text-sm">{c.name}</span>
@@ -123,12 +124,30 @@ export default function CommentsSection() {
             </div>
           ))}
 
-          {hasMore && (
+          {!showAll && comments.length > 2 && (
+            <button
+              onClick={() => setShowAll(true)}
+              className="w-full py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 text-sm"
+            >
+              {t.comments_loadMore} ({comments.length - 2} more)
+            </button>
+          )}
+
+          {showAll && hasMore && (
             <button
               onClick={() => loadComments(page + 1, true)}
               className="w-full py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 text-sm"
             >
               {t.comments_loadMore}
+            </button>
+          )}
+
+          {showAll && comments.length > 2 && (
+            <button
+              onClick={() => setShowAll(false)}
+              className="w-full py-2 text-slate-500 hover:text-slate-300 text-sm"
+            >
+              Show less
             </button>
           )}
         </div>
