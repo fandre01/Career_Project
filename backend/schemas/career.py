@@ -45,6 +45,7 @@ class CareerListItem(BaseModel):
     onet_code: str
     title: str
     category: Optional[str] = None
+    description: Optional[str] = None
     median_salary: Optional[float] = None
     education_level: Optional[str] = None
     growth_rate_pct: Optional[float] = None

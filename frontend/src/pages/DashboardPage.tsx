@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { BarChart3, Filter, ChevronLeft, ChevronRight } from 'lucide-react';
+import { BarChart3, Filter, ChevronLeft, ChevronRight, Info } from 'lucide-react';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell,
 } from 'recharts';
@@ -63,6 +63,12 @@ export default function DashboardPage() {
       <div className="flex items-center gap-3 mb-8">
         <BarChart3 className="w-8 h-8 text-indigo-400" />
         <h1 className="text-3xl font-bold text-white">{t.dash_title}</h1>
+      </div>
+
+      {/* U.S. Data Note */}
+      <div className="flex items-center gap-2 bg-slate-800/30 border border-slate-700/30 rounded-xl p-3 mb-6">
+        <Info className="w-4 h-4 text-amber-400 flex-shrink-0" />
+        <p className="text-xs text-slate-400">{t.dash_usNote}</p>
       </div>
 
       {/* Industry Breakdown Chart */}
@@ -168,10 +174,13 @@ export default function DashboardPage() {
                 {careers.items.map((career) => (
                   <tr key={career.id} className="border-b border-slate-700/30 hover:bg-slate-700/20 transition-colors">
                     <td className="px-6 py-4">
-                      <Link to={`/career/${career.id}`} className="text-white hover:text-indigo-400 font-medium no-underline">
+                      <Link to={`/career/${career.id}`} className="text-white hover:text-indigo-400 font-medium no-underline" title={career.description || ''}>
                         {career.title}
                       </Link>
-                      <p className="text-xs text-slate-500 mt-0.5">{career.education_level}</p>
+                      {career.description && (
+                        <p className="text-xs text-slate-500 mt-0.5">{career.description}</p>
+                      )}
+                      <p className="text-xs text-slate-600 mt-0.5">{career.education_level}</p>
                     </td>
                     <td className="px-4 py-4 text-sm text-slate-400 hidden md:table-cell">{career.category}</td>
                     <td className="px-4 py-4 text-sm text-white text-right hidden sm:table-cell">{formatSalary(career.median_salary)}</td>

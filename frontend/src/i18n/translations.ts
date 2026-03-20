@@ -152,6 +152,23 @@ const en = {
   compare_emptyDesc: 'Select 2-4 careers to compare their AI automation risk, salary projections, and key metrics.',
   compare_startComparing: 'Start Comparing',
 
+  // How It Works / Methodology
+  home_howTitle: 'How It Works',
+  home_howSubtitle: 'Transparent, data-driven career predictions you can trust.',
+  home_howStep1Title: 'Real Government Data',
+  home_howStep1Desc: 'We use occupational data from O*NET (sponsored by the U.S. Department of Labor) and the Bureau of Labor Statistics — covering skills, tasks, education, and employment for each career.',
+  home_howStep2Title: 'AI Risk Analysis',
+  home_howStep2Desc: 'Our machine learning models analyze each career\'s tasks: how repetitive they are, how much human interaction is needed, and how creative the work is. Careers with more routine, data-heavy tasks score higher risk.',
+  home_howStep3Title: 'What Should You Do?',
+  home_howStep3Desc: 'Use your risk score as a guide, not a verdict. Focus on building skills AI can\'t replace: creativity, empathy, leadership, and complex problem-solving. Explore upskilling paths in your career detail page.',
+  home_howNote: 'All data is based on U.S. labor market statistics. Risk scores are predictions, not guarantees — use them to inform your career planning.',
+
+  // Dashboard
+  dash_usNote: 'Data based on U.S. labor market statistics from O*NET and Bureau of Labor Statistics.',
+
+  // Career DNA - Risk Explanation
+  dna_riskExplain: 'This sets the maximum AI automation risk you\'re comfortable with. Lower values show only careers that AI is unlikely to affect. Higher values include riskier careers too.',
+
   // Engagement - Comments
   comments_title: 'Community Comments',
   comments_subtitle: 'Share your thoughts about the future of work',
@@ -287,6 +304,19 @@ const fr: TranslationKeys = {
   compare_emptyTitle: 'Comparer les carrières côte à côte',
   compare_emptyDesc: 'Sélectionnez 2 à 4 carrières pour comparer leur risque d\'automatisation par l\'IA, les projections salariales et les indicateurs clés.',
   compare_startComparing: 'Commencer la comparaison',
+
+  // How It Works / Methodology
+  home_howTitle: 'Comment ça marche',
+  home_howSubtitle: 'Des prédictions de carrière transparentes et basées sur les données.',
+  home_howStep1Title: 'Données gouvernementales réelles',
+  home_howStep1Desc: "Nous utilisons les données d'O*NET (sponsorisé par le Département du Travail des États-Unis) et du Bureau of Labor Statistics — couvrant les compétences, tâches, éducation et emploi.",
+  home_howStep2Title: 'Analyse de risque IA',
+  home_howStep2Desc: "Nos modèles d'apprentissage automatique analysent les tâches de chaque carrière : leur répétitivité, le niveau d'interaction humaine et la créativité du travail.",
+  home_howStep3Title: 'Que devez-vous faire ?',
+  home_howStep3Desc: "Utilisez votre score de risque comme guide, pas comme verdict. Concentrez-vous sur les compétences que l'IA ne peut pas remplacer : créativité, empathie, leadership et résolution de problèmes complexes.",
+  home_howNote: "Toutes les données sont basées sur les statistiques du marché du travail américain. Les scores sont des prédictions, pas des garanties.",
+  dash_usNote: "Données basées sur les statistiques du marché du travail américain d'O*NET et du Bureau of Labor Statistics.",
+  dna_riskExplain: "Définit le risque maximum d'automatisation IA que vous acceptez. Des valeurs basses montrent uniquement les carrières peu affectées par l'IA.",
 
   // Engagement - Comments
   comments_title: 'Commentaires de la communauté',
@@ -424,6 +454,19 @@ const es: TranslationKeys = {
   compare_emptyDesc: 'Seleccione de 2 a 4 carreras para comparar su riesgo de automatización por IA, proyecciones salariales y métricas clave.',
   compare_startComparing: 'Comenzar a comparar',
 
+  // How It Works / Methodology
+  home_howTitle: 'Cómo funciona',
+  home_howSubtitle: 'Predicciones de carrera transparentes y basadas en datos.',
+  home_howStep1Title: 'Datos gubernamentales reales',
+  home_howStep1Desc: 'Utilizamos datos de O*NET (patrocinado por el Departamento de Trabajo de EE.UU.) y el Bureau of Labor Statistics — cubriendo habilidades, tareas, educación y empleo.',
+  home_howStep2Title: 'Análisis de riesgo IA',
+  home_howStep2Desc: 'Nuestros modelos de aprendizaje automático analizan las tareas de cada carrera: qué tan repetitivas son, cuánta interacción humana necesitan y qué tan creativo es el trabajo.',
+  home_howStep3Title: '¿Qué deberías hacer?',
+  home_howStep3Desc: 'Usa tu puntuación de riesgo como guía, no como veredicto. Enfócate en habilidades que la IA no puede reemplazar: creatividad, empatía, liderazgo.',
+  home_howNote: 'Todos los datos se basan en estadísticas del mercado laboral de EE.UU. Las puntuaciones son predicciones, no garantías.',
+  dash_usNote: 'Datos basados en estadísticas del mercado laboral de EE.UU. de O*NET y Bureau of Labor Statistics.',
+  dna_riskExplain: 'Establece el riesgo máximo de automatización IA que aceptas. Valores bajos muestran solo carreras poco afectadas por la IA.',
+
   // Engagement - Comments
   comments_title: 'Comentarios de la comunidad',
   comments_subtitle: 'Comparte tus ideas sobre el futuro del trabajo',
@@ -559,6 +602,19 @@ const pt: TranslationKeys = {
   compare_emptyTitle: 'Comparar carreiras lado a lado',
   compare_emptyDesc: 'Selecione de 2 a 4 carreiras para comparar o risco de automação por IA, projeções salariais e métricas principais.',
   compare_startComparing: 'Começar a comparar',
+
+  // How It Works / Methodology
+  home_howTitle: 'Como funciona',
+  home_howSubtitle: 'Previsões de carreira transparentes e baseadas em dados.',
+  home_howStep1Title: 'Dados governamentais reais',
+  home_howStep1Desc: 'Usamos dados do O*NET (patrocinado pelo Departamento de Trabalho dos EUA) e do Bureau of Labor Statistics — cobrindo habilidades, tarefas, educação e emprego.',
+  home_howStep2Title: 'Análise de risco IA',
+  home_howStep2Desc: 'Nossos modelos de aprendizado de máquina analisam as tarefas de cada carreira: quão repetitivas são, quanta interação humana é necessária e quão criativo é o trabalho.',
+  home_howStep3Title: 'O que você deve fazer?',
+  home_howStep3Desc: 'Use sua pontuação de risco como guia, não como veredito. Foque em habilidades que a IA não pode substituir: criatividade, empatia, liderança.',
+  home_howNote: 'Todos os dados são baseados em estatísticas do mercado de trabalho dos EUA. As pontuações são previsões, não garantias.',
+  dash_usNote: 'Dados baseados em estatísticas do mercado de trabalho dos EUA do O*NET e Bureau of Labor Statistics.',
+  dna_riskExplain: 'Define o risco máximo de automação IA que você aceita. Valores baixos mostram apenas carreiras pouco afetadas pela IA.',
 
   // Engagement - Comments
   comments_title: 'Comentários da comunidade',
@@ -696,6 +752,19 @@ const de: TranslationKeys = {
   compare_emptyDesc: 'Wählen Sie 2 bis 4 Karrieren aus, um ihr KI-Automatisierungsrisiko, Gehaltsprognosen und wichtige Kennzahlen zu vergleichen.',
   compare_startComparing: 'Vergleich starten',
 
+  // How It Works / Methodology
+  home_howTitle: 'So funktioniert es',
+  home_howSubtitle: 'Transparente, datengestützte Karriereprognosen.',
+  home_howStep1Title: 'Echte Regierungsdaten',
+  home_howStep1Desc: 'Wir nutzen Daten von O*NET (gefördert vom US-Arbeitsministerium) und dem Bureau of Labor Statistics — mit Fähigkeiten, Aufgaben, Bildung und Beschäftigung.',
+  home_howStep2Title: 'KI-Risikoanalyse',
+  home_howStep2Desc: 'Unsere ML-Modelle analysieren die Aufgaben jeder Karriere: wie repetitiv sie sind, wie viel menschliche Interaktion nötig ist und wie kreativ die Arbeit ist.',
+  home_howStep3Title: 'Was sollten Sie tun?',
+  home_howStep3Desc: 'Nutzen Sie Ihren Risikoscore als Leitfaden, nicht als Urteil. Konzentrieren Sie sich auf Fähigkeiten, die KI nicht ersetzen kann: Kreativität, Empathie, Führung.',
+  home_howNote: 'Alle Daten basieren auf US-Arbeitsmarktstatistiken. Risikoscores sind Prognosen, keine Garantien.',
+  dash_usNote: 'Daten basieren auf US-Arbeitsmarktstatistiken von O*NET und Bureau of Labor Statistics.',
+  dna_riskExplain: 'Legt das maximale KI-Automatisierungsrisiko fest, das Sie akzeptieren. Niedrige Werte zeigen nur Karrieren, die KI kaum betrifft.',
+
   // Engagement - Comments
   comments_title: 'Community-Kommentare',
   comments_subtitle: 'Teilen Sie Ihre Gedanken zur Zukunft der Arbeit',
@@ -831,6 +900,19 @@ const zh: TranslationKeys = {
   compare_emptyTitle: '并排比较职业',
   compare_emptyDesc: '选择2到4个职业，比较其AI自动化风险、薪资预测和关键指标。',
   compare_startComparing: '开始比较',
+
+  // How It Works / Methodology
+  home_howTitle: '工作原理',
+  home_howSubtitle: '透明、数据驱动的职业预测。',
+  home_howStep1Title: '真实政府数据',
+  home_howStep1Desc: '我们使用O*NET（由美国劳工部赞助）和劳工统计局的职业数据——涵盖每个职业的技能、任务、教育和就业情况。',
+  home_howStep2Title: 'AI风险分析',
+  home_howStep2Desc: '我们的机器学习模型分析每个职业的任务：重复程度、所需人际互动量以及工作的创造性。',
+  home_howStep3Title: '你应该怎么做？',
+  home_howStep3Desc: '将风险评分作为指南，而非判决。专注于AI无法替代的技能：创造力、同理心、领导力和复杂问题解决能力。',
+  home_howNote: '所有数据基于美国劳动力市场统计。风险评分是预测，不是保证。',
+  dash_usNote: '数据基于O*NET和劳工统计局的美国劳动力市场统计。',
+  dna_riskExplain: '设置你能接受的最大AI自动化风险。较低的值只显示AI不太可能影响的职业。',
 
   // Engagement - Comments
   comments_title: '社区评论',
@@ -968,6 +1050,19 @@ const ar: TranslationKeys = {
   compare_emptyDesc: 'اختر من 2 إلى 4 مهن لمقارنة مخاطر الأتمتة بالذكاء الاصطناعي وتوقعات الرواتب والمقاييس الرئيسية.',
   compare_startComparing: 'ابدأ المقارنة',
 
+  // How It Works / Methodology
+  home_howTitle: 'كيف يعمل',
+  home_howSubtitle: 'توقعات مهنية شفافة مبنية على البيانات.',
+  home_howStep1Title: 'بيانات حكومية حقيقية',
+  home_howStep1Desc: 'نستخدم بيانات من O*NET (برعاية وزارة العمل الأمريكية) ومكتب إحصاءات العمل — تغطي المهارات والمهام والتعليم والتوظيف.',
+  home_howStep2Title: 'تحليل مخاطر الذكاء الاصطناعي',
+  home_howStep2Desc: 'تحلل نماذج التعلم الآلي مهام كل مهنة: مدى تكرارها، والتفاعل البشري المطلوب، وإبداع العمل.',
+  home_howStep3Title: 'ماذا يجب أن تفعل؟',
+  home_howStep3Desc: 'استخدم درجة المخاطر كدليل، ليس حكمًا. ركز على المهارات التي لا يمكن للذكاء الاصطناعي استبدالها: الإبداع والتعاطف والقيادة.',
+  home_howNote: 'جميع البيانات مبنية على إحصاءات سوق العمل الأمريكي. درجات المخاطر هي توقعات وليست ضمانات.',
+  dash_usNote: 'البيانات مبنية على إحصاءات سوق العمل الأمريكي من O*NET ومكتب إحصاءات العمل.',
+  dna_riskExplain: 'يحدد الحد الأقصى لمخاطر أتمتة الذكاء الاصطناعي. القيم المنخفضة تعرض فقط المهن التي لن يؤثر عليها الذكاء الاصطناعي.',
+
   // Engagement - Comments
   comments_title: 'تعليقات المجتمع',
   comments_subtitle: 'شارك أفكارك حول مستقبل العمل',
@@ -1103,6 +1198,19 @@ const hi: TranslationKeys = {
   compare_emptyTitle: 'करियर की साथ-साथ तुलना करें',
   compare_emptyDesc: 'AI स्वचालन जोखिम, वेतन अनुमान और प्रमुख मापदंडों की तुलना करने के लिए 2 से 4 करियर चुनें।',
   compare_startComparing: 'तुलना शुरू करें',
+
+  // How It Works / Methodology
+  home_howTitle: 'यह कैसे काम करता है',
+  home_howSubtitle: 'पारदर्शी, डेटा-संचालित करियर पूर्वानुमान।',
+  home_howStep1Title: 'वास्तविक सरकारी डेटा',
+  home_howStep1Desc: 'हम O*NET (अमेरिकी श्रम विभाग द्वारा प्रायोजित) और श्रम सांख्यिकी ब्यूरो के डेटा का उपयोग करते हैं — कौशल, कार्य, शिक्षा और रोजगार को कवर करते हुए।',
+  home_howStep2Title: 'AI जोखिम विश्लेषण',
+  home_howStep2Desc: 'हमारे मशीन लर्निंग मॉडल प्रत्येक करियर के कार्यों का विश्लेषण करते हैं: दोहराव, मानवीय संपर्क और रचनात्मकता।',
+  home_howStep3Title: 'आपको क्या करना चाहिए?',
+  home_howStep3Desc: 'अपने जोखिम स्कोर को मार्गदर्शक के रूप में उपयोग करें, फैसले के रूप में नहीं। AI जो प्रतिस्थापित नहीं कर सकता उन कौशलों पर ध्यान दें।',
+  home_howNote: 'सभी डेटा अमेरिकी श्रम बाजार के आंकड़ों पर आधारित हैं। जोखिम स्कोर पूर्वानुमान हैं, गारंटी नहीं।',
+  dash_usNote: 'डेटा O*NET और श्रम सांख्यिकी ब्यूरो से अमेरिकी श्रम बाजार के आंकड़ों पर आधारित है।',
+  dna_riskExplain: 'यह आपकी स्वीकार्य अधिकतम AI स्वचालन जोखिम सेट करता है। कम मान केवल वे करियर दिखाते हैं जिन पर AI का प्रभाव कम है।',
 
   // Engagement - Comments
   comments_title: 'समुदाय की टिप्पणियाँ',
@@ -1240,6 +1348,19 @@ const ja: TranslationKeys = {
   compare_emptyDesc: '2〜4つのキャリアを選択して、AI自動化リスク、給与予測、主要指標を比較しましょう。',
   compare_startComparing: '比較を開始',
 
+  // How It Works / Methodology
+  home_howTitle: '仕組み',
+  home_howSubtitle: '透明でデータに基づいたキャリア予測。',
+  home_howStep1Title: '実際の政府データ',
+  home_howStep1Desc: 'O*NET（米国労働省が後援）と労働統計局のデータを使用 — 各キャリアのスキル、タスク、教育、雇用をカバー。',
+  home_howStep2Title: 'AIリスク分析',
+  home_howStep2Desc: '機械学習モデルが各キャリアのタスクを分析：反復性、必要な人間の相互作用、創造性。',
+  home_howStep3Title: '何をすべきか？',
+  home_howStep3Desc: 'リスクスコアを判決ではなくガイドとして使用。AIが置き換えられないスキルに集中：創造性、共感力、リーダーシップ。',
+  home_howNote: 'すべてのデータは米国の労働市場統計に基づいています。リスクスコアは予測であり、保証ではありません。',
+  dash_usNote: 'データはO*NETと労働統計局の米国労働市場統計に基づいています。',
+  dna_riskExplain: '許容できるAI自動化リスクの最大値を設定。低い値はAIの影響を受けにくいキャリアのみ表示。',
+
   // Engagement - Comments
   comments_title: 'コミュニティコメント',
   comments_subtitle: '仕事の未来についてあなたの考えを共有してください',
@@ -1375,6 +1496,19 @@ const ko: TranslationKeys = {
   compare_emptyTitle: '커리어를 나란히 비교',
   compare_emptyDesc: '2~4개의 커리어를 선택하여 AI 자동화 위험, 급여 전망 및 주요 지표를 비교하세요.',
   compare_startComparing: '비교 시작',
+
+  // How It Works / Methodology
+  home_howTitle: '작동 방식',
+  home_howSubtitle: '투명하고 데이터 기반의 경력 예측.',
+  home_howStep1Title: '실제 정부 데이터',
+  home_howStep1Desc: 'O*NET(미국 노동부 후원)과 노동통계국의 데이터를 사용 — 각 직업의 기술, 업무, 교육, 고용을 포함.',
+  home_howStep2Title: 'AI 위험 분석',
+  home_howStep2Desc: '머신러닝 모델이 각 직업의 업무를 분석합니다: 반복성, 인간 상호작용, 창의성.',
+  home_howStep3Title: '무엇을 해야 할까요?',
+  home_howStep3Desc: '위험 점수를 판결이 아닌 가이드로 사용하세요. AI가 대체할 수 없는 기술에 집중하세요: 창의성, 공감능력, 리더십.',
+  home_howNote: '모든 데이터는 미국 노동 시장 통계를 기반으로 합니다. 위험 점수는 예측이며 보장이 아닙니다.',
+  dash_usNote: '데이터는 O*NET과 노동통계국의 미국 노동 시장 통계를 기반으로 합니다.',
+  dna_riskExplain: '허용 가능한 최대 AI 자동화 위험을 설정합니다. 낮은 값은 AI의 영향을 받지 않을 직업만 표시합니다.',
 
   // Engagement - Comments
   comments_title: '커뮤니티 댓글',
@@ -1512,6 +1646,19 @@ const sw: TranslationKeys = {
   compare_emptyDesc: 'Chagua kazi 2 hadi 4 kulinganisha hatari ya otomatiki ya AI, makadirio ya mishahara na vipimo muhimu.',
   compare_startComparing: 'Anza kulinganisha',
 
+  // How It Works / Methodology
+  home_howTitle: 'Jinsi inavyofanya kazi',
+  home_howSubtitle: 'Utabiri wa kazi unaotegemea data kwa uwazi.',
+  home_howStep1Title: 'Data halisi ya serikali',
+  home_howStep1Desc: 'Tunatumia data kutoka O*NET (inayofadhiliwa na Wizara ya Kazi ya Marekani) na Bureau of Labor Statistics — ikijumuisha ujuzi, kazi, elimu na ajira.',
+  home_howStep2Title: 'Uchambuzi wa hatari ya AI',
+  home_howStep2Desc: 'Modeli zetu za kujifunza kwa mashine zinachambua kazi za kila taaluma: jinsi zinavyorudiwa, mwingiliano wa kibinadamu, na ubunifu.',
+  home_howStep3Title: 'Unapaswa kufanya nini?',
+  home_howStep3Desc: 'Tumia alama yako ya hatari kama mwongozo, si hukumu. Zingatia ujuzi ambao AI haiwezi kubadilisha: ubunifu, huruma, uongozi.',
+  home_howNote: 'Data yote inategemea takwimu za soko la kazi la Marekani. Alama za hatari ni utabiri, si dhamana.',
+  dash_usNote: 'Data inategemea takwimu za soko la kazi la Marekani kutoka O*NET na Bureau of Labor Statistics.',
+  dna_riskExplain: 'Inaweka kiwango cha juu cha hatari ya AI unachokubali. Thamani za chini zinaonyesha kazi ambazo AI haiathiri sana.',
+
   // Engagement - Comments
   comments_title: 'Maoni ya Jamii',
   comments_subtitle: 'Shiriki mawazo yako kuhusu mustakabali wa kazi',
@@ -1648,6 +1795,19 @@ const ru: TranslationKeys = {
   compare_emptyDesc: 'Выберите от 2 до 4 карьер для сравнения рисков автоматизации ИИ, прогнозов зарплат и ключевых показателей.',
   compare_startComparing: 'Начать сравнение',
 
+  // How It Works / Methodology
+  home_howTitle: 'Как это работает',
+  home_howSubtitle: 'Прозрачные прогнозы карьеры на основе данных.',
+  home_howStep1Title: 'Реальные государственные данные',
+  home_howStep1Desc: 'Мы используем данные O*NET (при поддержке Минтруда США) и Бюро статистики труда — навыки, задачи, образование и занятость.',
+  home_howStep2Title: 'Анализ рисков ИИ',
+  home_howStep2Desc: 'Наши модели машинного обучения анализируют задачи каждой профессии: повторяемость, человеческое взаимодействие, творчество.',
+  home_howStep3Title: 'Что делать?',
+  home_howStep3Desc: 'Используйте оценку риска как ориентир, а не приговор. Сосредоточьтесь на навыках, которые ИИ не может заменить: креативность, эмпатия, лидерство.',
+  home_howNote: 'Все данные основаны на статистике рынка труда США. Оценки риска — это прогнозы, а не гарантии.',
+  dash_usNote: 'Данные основаны на статистике рынка труда США от O*NET и Бюро статистики труда.',
+  dna_riskExplain: 'Устанавливает максимальный допустимый риск автоматизации ИИ. Низкие значения показывают только профессии с низким влиянием ИИ.',
+
   // Engagement - Comments
   comments_title: 'Комментарии сообщества',
   comments_subtitle: 'Поделитесь своими мыслями о будущем работы',
@@ -1783,6 +1943,19 @@ const ht: TranslationKeys = {
   compare_emptyTitle: 'Konpare karyè bò kote bò kote',
   compare_emptyDesc: 'Chwazi 2 a 4 karyè pou konpare risk otomatizasyon IA, pwojeksyon salè ak mezi kle yo.',
   compare_startComparing: 'Kòmanse konpare',
+
+  // How It Works / Methodology
+  home_howTitle: 'Ki jan li fonksyone',
+  home_howSubtitle: 'Prediksyon karyè transparan ki baze sou done.',
+  home_howStep1Title: 'Done gouvènman reyèl',
+  home_howStep1Desc: 'Nou itilize done O*NET (sipòte pa Depatman Travay Etazini) ak Bureau of Labor Statistics — ki kouvri konpetans, travay, edikasyon ak anplwa.',
+  home_howStep2Title: 'Analiz risk AI',
+  home_howStep2Desc: 'Modèl aprantisaj machin nou yo analize travay chak karyè: repetitivite, enter aksyon imèn, ak kreyativite.',
+  home_howStep3Title: 'Kisa ou ta dwe fè?',
+  home_howStep3Desc: 'Itilize nòt risk ou kòm gid, pa kòm jijman. Konsantre sou konpetans AI pa ka ranplase: kreyativite, anpati, lidèchip.',
+  home_howNote: 'Tout done yo baze sou estatistik mache travay Ameriken. Nòt risk yo se prediksyon, pa garanti.',
+  dash_usNote: 'Done baze sou estatistik mache travay Ameriken nan O*NET ak Bureau of Labor Statistics.',
+  dna_riskExplain: 'Sa a mete risk otomatizasyon AI maksimòm ou aksepte. Valè ki ba montre sèlman karyè AI pa gen anpil efè sou yo.',
 
   // Engagement - Comments
   comments_title: 'Kòmantè Kominote a',

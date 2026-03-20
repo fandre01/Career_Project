@@ -168,6 +168,7 @@ export default function CareerDNAPage() {
               <label className="block text-sm font-medium text-slate-300 mb-2">
                 {t.dna_maxRisk}: {maxRisk}%
               </label>
+              <p className="text-xs text-slate-500 mb-3">{t.dna_riskExplain}</p>
               <input
                 type="range"
                 min={10}

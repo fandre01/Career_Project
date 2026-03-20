@@ -31,6 +31,7 @@ export interface CareerListItem {
   onet_code: string;
   title: string;
   category: string | null;
+  description: string | null;
   median_salary: number | null;
   education_level: string | null;
   growth_rate_pct: number | null;

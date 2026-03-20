@@ -13,7 +13,7 @@ import { formatSalary } from '../utils/formatters';
 import { useLanguage } from '../i18n/LanguageContext';
 import type { CareerDetail, CareerListItem } from '../types/career';
 
-const COLORS = ['#6366f1', '#8b5cf6', '#ec4899', '#f59e0b'];
+const COLORS = ['#3b82f6', '#ef4444', '#22c55e', '#f59e0b'];
 
 export default function ComparePage() {
   const { t } = useLanguage();

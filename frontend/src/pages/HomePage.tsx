@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, AlertTriangle, Sparkles, ArrowRight, Brain, Target, BarChart3 } from 'lucide-react';
+import { Shield, AlertTriangle, Sparkles, ArrowRight, Brain, Target, BarChart3, Database, Cpu, Lightbulb, Info } from 'lucide-react';
 import StatCard from '../components/common/StatCard';
 import RiskBadge from '../components/common/RiskBadge';
 import { SkeletonCard } from '../components/common/Skeleton';
@@ -137,6 +137,41 @@ export default function HomePage() {
       {/* Visitor Stats */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <ViewCounter />
+      </section>
+
+      {/* How It Works */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-3">{t.home_howTitle}</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">{t.home_howSubtitle}</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 text-center">
+            <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Database className="w-6 h-6 text-blue-400" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">{t.home_howStep1Title}</h3>
+            <p className="text-sm text-slate-400">{t.home_howStep1Desc}</p>
+          </div>
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 text-center">
+            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Cpu className="w-6 h-6 text-purple-400" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">{t.home_howStep2Title}</h3>
+            <p className="text-sm text-slate-400">{t.home_howStep2Desc}</p>
+          </div>
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 text-center">
+            <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Lightbulb className="w-6 h-6 text-green-400" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">{t.home_howStep3Title}</h3>
+            <p className="text-sm text-slate-400">{t.home_howStep3Desc}</p>
+          </div>
+        </div>
+        <div className="flex items-start gap-2 bg-slate-800/30 border border-slate-700/30 rounded-xl p-4 max-w-3xl mx-auto">
+          <Info className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+          <p className="text-sm text-slate-400">{t.home_howNote}</p>
+        </div>
       </section>
 
       {/* Top Risk & Safe */}
