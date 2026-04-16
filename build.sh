@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -o errexit
 
-# Install Python dependencies (works on both Render and Railway)
+# Bootstrap pip if not available (works on Railway/Nix environments)
+python3 -m ensurepip --upgrade 2>/dev/null || curl -sS https://bootstrap.pypa.io/get-pip.py | python3
+
+# Install Python dependencies
 python3 -m pip install --upgrade pip
 python3 -m pip install -r backend/requirements.txt
 
