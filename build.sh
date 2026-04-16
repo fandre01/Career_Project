@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -o errexit
 
-# Install Python dependencies
-pip install -r backend/requirements.txt
+# Install Python dependencies (works on both Render and Railway)
+python3 -m pip install --upgrade pip
+python3 -m pip install -r backend/requirements.txt
 
 # Build frontend
 cd frontend
@@ -10,6 +11,6 @@ npm install --legacy-peer-deps
 npm run build
 cd ..
 
-# Run database seed if needed
-python -m scripts.seed_database 2>/dev/null || true
-python -m scripts.train_models 2>/dev/null || true
+# Run database seed if needed (non-fatal if it fails)
+python3 -m scripts.seed_database 2>/dev/null || true
+python3 -m scripts.train_models 2>/dev/null || true
